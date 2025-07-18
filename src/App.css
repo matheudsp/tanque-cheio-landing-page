@@ -1,0 +1,9 @@
+.elemento {
+  /* Para navegadores WebKit (Chrome, Safari, etc.) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Para Firefox */
+  scrollbar-width: none;
+}

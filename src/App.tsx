@@ -5,12 +5,14 @@ import { CtaSection } from "./components/sections/CtaSection";
 import { FeaturesSection } from "./components/sections/FeaturesSection";
 import { HeroSection } from "./components/sections/HeroSection";
 import { PriceDifferenceSection } from "./components/sections/PriceDifferenceSection";
-import { ScrollProgress } from "./components/animate-ui/components/scroll-progress"; // 1. Importe o componente
+import { ScrollProgress } from "./components/animate-ui/components/scroll-progress";
 
 function App() {
   return (
-    <div className="bg-gray-50 text-gray-800">
-      <ScrollProgress progressProps={{ className: "bg-cyan-500" }} />
+    <div className="bg-brand-background-default text-brand-text-primary">
+      <ScrollProgress
+        progressProps={{ className: "bg-brand-secondary-main" }}
+      />
 
       <Header />
       <main>

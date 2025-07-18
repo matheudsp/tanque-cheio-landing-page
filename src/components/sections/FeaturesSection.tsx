@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
-import MapScreen from "@/assets/map-screen.jpg";
-import FilterScreen from "@/assets/filter-screen.jpg";
-import MonitorScreen from "@/assets/monitor-price.jpg";
+import MapScreen from "@/assets/apple-iphone-15-blue-mockup/map-screen-left.png";
+import FilterScreen from "@/assets/apple-iphone-15-blue-mockup/filter-screen-portrait.png";
+import MonitorScreen from "@/assets/apple-iphone-15-blue-mockup/monitor-price-left.png";
 import { MotionEffect } from "../animate-ui/effects/motion-effect";
 
 const features = [
@@ -27,14 +27,15 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 bg-brand-background-paper">
       <div className="container mx-auto px-6">
         <MotionEffect slide={{ direction: "up" }} fade inView>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text-primary">
               Tudo que você precisa em um só lugar
             </h2>
-            <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+
+            <p className="text-lg text-brand-text-secondary mt-4 max-w-2xl mx-auto">
               O Tanque Cheio foi desenhado para ser seu copiloto na hora de
               abastecer.
             </p>
@@ -60,7 +61,7 @@ export function FeaturesSection() {
                 <img
                   src={feature.imageUrl}
                   alt={feature.title}
-                  className="rounded-[2.5rem] w-[45%] mx-auto md:w-[55%] lg:w-[65%] xl:w-[42%] shadow-2xl border-8 border-gray-800"
+                  className=" mx-auto w-[100%] sm:w-[90%]  md:w-[95%] lg:w-[65%] xl:w-[50%] "
                 />
               </MotionEffect>
 
@@ -71,8 +72,12 @@ export function FeaturesSection() {
                 className={`${index % 2 === 1 ? "md:col-start-1" : ""}`}
               >
                 <div className="text-left">
-                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <h3 className="text-2xl font-bold mb-4 text-brand-text-primary">
+                    {feature.title}
+                  </h3>
+                  <p className="text-brand-text-secondary">
+                    {feature.description}
+                  </p>
                 </div>
               </MotionEffect>
             </div>

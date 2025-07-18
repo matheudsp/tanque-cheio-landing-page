@@ -1,10 +1,20 @@
 import { RippleButton } from "./animate-ui/buttons/ripple";
 import phoneMockupUrl from "@/assets/search-screen.jpg";
+import appStore from "@/assets/app-store.svg";
+import playStore from "@/assets/play-store.svg";
 
 import { MotionEffect } from "./animate-ui/effects/motion-effect";
 import { RotatingText } from "./animate-ui/text/rotating";
-import { HoleBackground } from "./animate-ui/backgrounds/hole";
 import { StarsBackground } from "./animate-ui/backgrounds/stars";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./animate-ui/radix/dialog";
 
 export function Hero() {
   return (
@@ -18,7 +28,8 @@ export function Hero() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center ">
             <div className="text-left">
               <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white">
-                Nunca mais pague o preço cheio no combustível. O Tanque Cheio conta com
+                Nunca mais pague o preço cheio no combustível. O Tanque Cheio
+                conta com
               </h1>
               <RotatingText
                 className="text-4xl font-semibold text-white mt-4"
@@ -46,12 +57,58 @@ export function Hero() {
               Abasteça de forma mais inteligente sabendo qual é o preço mais
               barato e onde estão os melhores postos fiscalizados pela ANP.
             </p>
-            <RippleButton
-              size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3"
-            >
-              BAIXE O APLICATIVO
-            </RippleButton>
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <RippleButton
+                  size="lg"
+                  className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3"
+                >
+                  BAIXE O APLICATIVO
+                </RippleButton>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md z-50">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold text-center">
+                    Quase lá!
+                  </DialogTitle>
+                  <DialogDescription className="text-center">
+                    Escolha sua loja de aplicativos para baixar o Tanque Cheio e
+                    comece a economizar agora mesmo.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="flex flex-col space-y-4 mt-4">
+                  <a
+                    href="#"
+                    className="bg-gray-800 text-white hover:bg-gray-700 rounded-lg p-3 flex items-center transition-colors w-full"
+                  >
+                    <img
+                      src={appStore}
+                      alt="App Store"
+                      className="w-10 h-10 mr-4"
+                    />
+                    <div>
+                      <p className="text-xs text-gray-300">Disponível na</p>
+                      <p className="text-lg font-semibold">App Store</p>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    className="bg-gray-800 text-white hover:bg-gray-700 rounded-lg p-3 flex items-center transition-colors w-full"
+                  >
+                    <img
+                      src={playStore}
+                      alt="Google Play"
+                      className="w-10 h-10 mr-4"
+                    />
+                    <div>
+                      <p className="text-xs text-gray-300">Disponível no</p>
+                      <p className="text-lg font-semibold">Google Play</p>
+                    </div>
+                  </a>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
 
           <div className="flex md:hidden justify-center mt-8">

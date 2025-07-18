@@ -1,22 +1,27 @@
-import "./App.css";
-import { ScrollProgress } from "./components/animate-ui/components/scroll-progress";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { SectionAnimatedFeatures } from "./components/sections/SectionAnimatedFeatures";
+import { BenefitsSection } from "./components/sections/BenefitsSection";
+import { CtaSection } from "./components/sections/CtaSection";
+import { FeaturesSection } from "./components/sections/FeaturesSection";
+import { HeroSection } from "./components/sections/HeroSection";
+import { PriceDifferenceSection } from "./components/sections/PriceDifferenceSection";
+import { ScrollProgress } from "./components/animate-ui/components/scroll-progress"; // 1. Importe o componente
 
 function App() {
   return (
-    <>
-      <ScrollProgress className={"absolute "}>
-        <main className="max-w-7xl mx-auto ">
-          <Header />
-          <Hero />
-          <SectionAnimatedFeatures />
-        </main>
-        <Footer />
-      </ScrollProgress>
-    </>
+    <div className="bg-gray-50 text-gray-800">
+      <ScrollProgress progressProps={{ className: "bg-cyan-500" }} />
+
+      <Header />
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <BenefitsSection />
+        <PriceDifferenceSection />
+        <CtaSection />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

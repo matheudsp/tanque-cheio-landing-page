@@ -6,7 +6,7 @@ import icon from "@/assets/adaptive-foreground.png";
 export function CtaSection() {
   return (
     // Gradiente agora de um azul muito claro (blue-100) para branco
-    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-r from-blue-200 to-white">
+    <section className="py-20 md:py-20 relative overflow-hidden bg-gradient-to-r from-blue-200 to-white">
       <div className="container mx-auto px-6 relative z-10">
         <MotionEffect slide={{ direction: "up" }} fade inView>
           <div className="  text-brand-text-primary rounded-2xl p-12 text-center ">

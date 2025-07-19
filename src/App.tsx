@@ -7,7 +7,9 @@ import { HeroSection } from "./components/sections/HeroSection";
 import { PriceDifferenceSection } from "./components/sections/PriceDifferenceSection";
 import { ScrollProgress } from "./components/animate-ui/components/scroll-progress";
 
+
 function App() {
+  
   return (
     <div className="bg-brand-background-default text-brand-text-primary">
       <ScrollProgress

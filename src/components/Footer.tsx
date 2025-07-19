@@ -1,6 +1,6 @@
 import { Instagram } from "lucide-react";
-import appStore from "@/assets/app-store.svg";
-import playStore from "@/assets/play-store.svg";
+import appStore from "@/assets/app-storeBlack.svg";
+import playStore from "@/assets/play-storeBlack.svg";
 import logo from "@/assets/icon.png";
 import tiktok from "@/assets/tiktok.svg";
 import { MotionEffect } from "./animate-ui/effects/motion-effect";
@@ -12,7 +12,7 @@ export function Footer() {
 
       <MotionEffect slide={{ direction: "up" }} fade inView>
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 ">
             <div className="col-span-1 md:col-span-3 lg:col-span-1">
               <div className="flex items-center mb-4">
                 <img
@@ -40,6 +40,7 @@ export function Footer() {
                 >
                   <img
                     src={appStore}
+
                     alt="App Store"
                     className="w-8 h-8 mr-3"
                   />

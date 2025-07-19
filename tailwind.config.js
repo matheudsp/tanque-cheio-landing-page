@@ -21,34 +21,31 @@ export default {
       colors: {
         brand: {
           primary: {
-            main: "#3B82F6",
-            light: "#60A5FA",
-            dark: "#2563EB",
+            main: "#253760",      // Um azul um pouco mais claro para elementos principais
+            dark: "#1D2B4A",      // Azul profundo (Meia-noite) para o Hero e Footer
             text: "#FFFFFF",
           },
           secondary: {
-            main: "#F97316",
-            light: "#FB923C",
-            dark: "#EA580C",
-            text: "#FFFFFF",
+            main: "#FFC107",      // Amarelo-Dourado principal (Energia)
+            light: "#FFD54F",     // Tom mais claro para hovers
+            dark: "#FFA000",      // Tom mais escuro para hovers
+            text: "#1D2B4A",      // Texto escuro para bom contraste no amarelo
           },
           background: {
-            default: "#FDFDFD",
-            paper: "#F1F1F1",
-            elevated: "#EEEEEE",
+            default: "#F8F7F2",    // Off-white aconchegante (Areia)
+            paper: "#FFFFFF",     // Branco puro para cards e elementos de destaque
           },
           text: {
-            primary: "#111827",
-            secondary: "#6B7280",
+            primary: "#1A1A1A",    // Preto suave, menos agressivo que o #000
+            secondary: "#555555",  // Cinza escuro para textos de apoio
             disabled: "#9CA3AF",
-            hint: "#9CA3AF",
           },
-          border: "#E5E7EB",
+          border: "#EAE8E1",       // Cor de borda que combina com o fundo "Areia"
           divider: "#F3F4F6",
-          error: "#EF4444",
-          warning: "#F59E0B",
-          info: "#06B6D4",
-          success: "#22C55E",
+          error: "#D32F2F",        // Vermelho mais sóbrio
+          warning: "#FFA000",      // Reutilizando o amarelo escuro
+          info: "#0288D1",         // Azul informativo
+          success: "#388E3C",      // Verde mais encorpado
         }
       },
     },

@@ -1,8 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { AnimatePresence, motion, useScroll } from "motion/react";
-import { cn } from "@/lib/utils";
 
-// Importe suas imagens como antes
 import MapScreen from "@/assets/apple-iphone-15-blue-mockup/map-screen-left.png";
 import FilterScreen from "@/assets/apple-iphone-15-blue-mockup/filter-screen-portrait.png";
 import MonitorScreen from "@/assets/apple-iphone-15-blue-mockup/monitor-price-left.png";
@@ -30,12 +28,18 @@ const features = [
 
 export function FeaturesSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
-      const idx = Math.min(features.length - 1, Math.floor(latest * features.length));
+      const idx = Math.min(
+        features.length - 1,
+        Math.floor(latest * features.length)
+      );
       setActiveIndex(idx);
     });
     return () => unsubscribe();
@@ -45,9 +49,11 @@ export function FeaturesSection() {
   const totalHeight = features.length * 130;
 
   return (
-    <section ref={containerRef} className="py-20 md:py-28 bg-brand-background-paper">
+    <section
+      ref={containerRef}
+      className="py-20 md:py-28 bg-brand-background-paper"
+    >
       <div className="container mx-auto px-6">
-        {/* Título e descrição gerais */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,11 +64,11 @@ export function FeaturesSection() {
             Tudo que você precisa em um só lugar
           </h2>
           <p className="text-lg text-brand-text-secondary mt-4 max-w-2xl mx-auto">
-            O Tanque Cheio foi desenhado para ser seu copiloto na hora de abastecer.
+            O Tanque Cheio foi desenhado para ser seu copiloto na hora de
+            abastecer.
           </p>
         </motion.div>
 
-        {/* Mobile: animação por seção empilhada */}
         <div className="md:hidden space-y-16">
           {features.map((feature) => (
             <motion.div
@@ -91,7 +97,6 @@ export function FeaturesSection() {
           ))}
         </div>
 
-        {/* Desktop: efeito sticky Apple style */}
         <div className="hidden md:block">
           <div className="relative" style={{ height: `${totalHeight}vh` }}>
             <div className="sticky top-0 h-screen flex items-center">
@@ -111,7 +116,7 @@ export function FeaturesSection() {
                     />
                   </AnimatePresence>
                 </div>
-                {/* Texto */}
+
                 <div className="flex flex-col justify-center px-4">
                   <AnimatePresence mode="wait">
                     <motion.div

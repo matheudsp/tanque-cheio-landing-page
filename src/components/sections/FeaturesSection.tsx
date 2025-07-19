@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import MapScreen from "@/assets/apple-iphone-15-blue-mockup/map-screen-left.png";
 import FilterScreen from "@/assets/apple-iphone-15-blue-mockup/filter-screen-portrait.png";
 import MonitorScreen from "@/assets/apple-iphone-15-blue-mockup/monitor-price-left.png";

@@ -2,21 +2,15 @@ import { RippleButton } from "../animate-ui/buttons/ripple";
 import appStore from "@/assets/app-store.svg";
 import playStore from "@/assets/play-store.svg";
 import { MotionEffect } from "../animate-ui/effects/motion-effect";
-import { HoleBackground } from "../animate-ui/backgrounds/hole";
-
+import icon from "@/assets/adaptive-foreground.png";
 export function CtaSection() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden">
-      <HoleBackground
-        className="absolute inset-0 flex items-center justify-center "
-        particleRGBColor={[249, 115, 22]}
-
-        strokeColor="#E5E7EB"
-      />
-
+    // Gradiente agora de um azul muito claro (blue-100) para branco
+    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-r from-blue-200 to-white">
       <div className="container mx-auto px-6 relative z-10">
         <MotionEffect slide={{ direction: "up" }} fade inView>
-          <div className="bg-brand-background-paper/60 backdrop-blur-lg border border-brand-border/50 text-brand-text-primary rounded-2xl p-12 text-center shadow-2xl">
+          <div className="  text-brand-text-primary rounded-2xl p-12 text-center ">
+            <img src={icon} className="rounded-[25px] w-20 my-10 mx-auto shadow-xl" />
             <h2 className="text-3xl md:text-4xl font-extrabold">
               Comece a economizar hoje mesmo!
             </h2>

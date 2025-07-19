@@ -7,7 +7,7 @@ import { MotionEffect } from "./animate-ui/effects/motion-effect";
 
 export function Footer() {
   return (
-    <footer className="relative bg-brand-background-paper/80 backdrop-blur-md text-brand-text-primary mx-auto py-12">
+    <footer className="relative bg-white/80 backdrop-blur-md text-brand-text-primary mx-auto py-12">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-2/3 bg-gradient-to-r from-transparent via-brand-border to-transparent" />
 
       <MotionEffect slide={{ direction: "up" }} fade inView>

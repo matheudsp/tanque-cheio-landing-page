@@ -1,5 +1,5 @@
 import { MotionEffect } from "../animate-ui/effects/motion-effect";
-import { CountingNumber } from "../animate-ui/text/counting-number";
+import { PriceCarousel } from "../PriceCarousel"; // 1. Importe o novo carrossel
 
 const fuelData = [
   {
@@ -56,64 +56,8 @@ export function PriceDifferenceSection() {
             </p>
           </div>
         </MotionEffect>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {fuelData.map((fuel, index) => (
-            <MotionEffect
-              key={fuel.name}
-              slide={{ direction: "up" }}
-              fade
-              inView
-              delay={index * 0.1}
-            >
-              <div className="bg-brand-background-paper rounded-xl shadow-lg p-6 border border-brand-border h-full flex flex-col hover:shadow-2xl hover:border-brand-primary-main/20 transition-all duration-300">
-                <h3 className="text-xl font-bold mb-4 text-brand-text-primary">
-                  {fuel.name}
-                </h3>
-                <div className="flex justify-between text-brand-text-secondary text-sm">
-                  <span>Preço Máximo</span>
-                  <span>Preço Mínimo</span>
-                </div>
-                <div className="flex justify-between items-end font-semibold text-2xl mb-4">
-                  <span className="text-brand-error">
-                    R${" "}
-                    <CountingNumber
-                      number={fuel.max}
-                      decimalPlaces={2}
-                      decimalSeparator=","
-                      className="font-mono"
-                    />
-                  </span>
-                  <span className="text-brand-success">
-                    R${" "}
-                    <CountingNumber
-                      number={fuel.min}
-                      decimalPlaces={2}
-                      decimalSeparator=","
-                      className="font-mono"
-                    />
-                  </span>
-                </div>
-                <div className="mt-auto pt-4 border-t border-brand-divider border-dashed">
-                  <div className="bg-brand-info/10 text-brand-info rounded-lg p-4 text-center">
-                    <p className="font-semibold">Sua economia pode chegar a</p>
-                    <p className="text-3xl font-bold">
-                      R${" "}
-                      <CountingNumber
-                        number={fuel.diff}
-                        decimalPlaces={2}
-                        decimalSeparator=","
-                        className="font-mono"
-                      />
-                      <span className="font-medium text-xl">
-                        {fuel.measureUnit}
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </MotionEffect>
-          ))}
-        </div>
+
+        <PriceCarousel slides={fuelData} />
       </div>
     </section>
   );

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from 'tailwindcss/defaultTheme';
+
 export default {
   content: [
     "./index.html",
@@ -13,7 +15,9 @@ export default {
       '2xl': '1536px',
     },
     extend: {
-
+      fontFamily: {
+        sans: ['REM', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         brand: {
           primary: {

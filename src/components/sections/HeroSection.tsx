@@ -32,7 +32,7 @@ export function HeroSection() {
                   preço e a melhor qualidade, tudo na palma da sua mão.
                 </p>
 
-                <div className="mt-10 flex flex-col sm:flex-row gap-8">
+                <div className="mt-10 flex flex-col md:flex-row gap-8">
                   <div className="flex items-center gap-4">
                     <div className="bg-brand-secondary-main/10 border border-brand-secondary-main/20 rounded-xl p-3">
                       <Fuel className="h-8 w-8 text-brand-secondary-main" />
